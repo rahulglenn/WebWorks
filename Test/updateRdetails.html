@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="form-group">
+                <label for="hp">HP :</label>
+                <select class="form-control" id="hp">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="swg">SWG value :</label>
+                <input type="text" class="form-control" id="swg" readonly>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount of wire Needed :</label>
+                <input type="text" class="form-control" id="amount" readonly>
+            </div>
+            <div class="form-group">
+                <label for="rdetails">Rewinding Details :</label>
+                <textarea class="form-control" rows="5" id="rdetails" readonly></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-primary">Delete</button>
+            <button type="button" class="btn btn-primary"
+                onclick="location.href='rewindingdashboard.html'">Back</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
