@@ -24,7 +24,7 @@
             <label for="Key">Activation Key : </label>
             <input type="text" class="form-control" id="key">
         </div>
-        <h6>Don't have an activation key? <a href="activation.jsp">Buy now</a></h6>
+          <h6>Don't have an activation key? <a href="activation.jsp">Buy now</a><form><input type="submit" value="verify" class="btn btn-success"></form></h6>
         <div class="form-group">
             <label for="cname">Company Name : </label>
             <input type="text" class="form-control" id="cname" name="cname">
