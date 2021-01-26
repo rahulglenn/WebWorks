@@ -31,24 +31,13 @@
         </div>
         <div class="form-group">
             <label for="Platform">Platform Needed:</label>
-            <select class="form-control" id="platform">
-                <option>Rewinding</option>
-                <option>Agriculture</option>
-                <option>Electrical</option>
+            <select class="form-control" id="platform" onclick="serviceadder()">
+                <option value="r">Rewinding</option>
+                <option value="o">Others</option>
             </select>
         </div>
-        <label for="services">Services Needed : </label>
-        <form>
-            <div class="checkbox">
-                <label><input type="checkbox" value=""> Record Management</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value=""> Employee Management</label>
-            </div>
-            <div class="checkbox disabled">
-                <label><input type="checkbox" value=""> Stock Management</label>
-            </div>
-        </form><br>
+        <div id="service"></div>
+        <br>
         <button type="button" class="btn btn-primary">Buy an activation key</button>
         <br><br>
         <button type="button" class="btn btn-primary" onclick="location.href='index.jsp'">Home</button>
@@ -56,6 +45,19 @@
 </div>
 </div>
 </div>
+<script>
+    function serviceadder(){
+        var service = document.getElementById("service");
+        if(document.getElementById("platform").value=='o'){
+            service.innerHTML="";
+            service.innerHTML ="<div class='form-group'><label for='platname'>Enter Platform name :</label><input type='text' placeholder='platform name here' id='platname' class='form-control'></div><label for='services'>Services Needed : </label> <form> <div class='checkbox'><label><input type='checkbox' value='1' name='record'>Record Management</label></div> <div class='checkbox'> <label><input type='checkbox' value='2' name='employee'> Employee Management</label> </div> <div class='checkbox disabled'> <label><input type='checkbox' value='3'> Stock Management</label> </div> </form>";
+        }
+        else{
+            service.innerHTML="";
+        }
+
+    }
+</script>
 </body>
 
 </html>
