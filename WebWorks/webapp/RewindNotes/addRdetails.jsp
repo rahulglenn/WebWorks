@@ -11,7 +11,8 @@
 
 <%@include file="../head.jsp"%>
 <body>
-<%@include file="../mainsidebar.jsp" %>
+<%@include file="../dashboardnavigation.jsp"%>
+<%@include file="../mainsidebar.jsp"%>
 <div class="container">
     <div class="jumbotron">
         <form method="post" action="AddRdetailsServlet">

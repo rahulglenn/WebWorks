@@ -9,10 +9,12 @@
 <%@ include file="../AddOnServices/DBconnect.jsp"%>
 <html>
 
+
 <%@include file="../head.jsp"%>
 
 <body>
-<%@include file="../mainsidebar.jsp" %>
+<%@include file="../dashboardnavigation.jsp"%>
+<%@include file="../mainsidebar.jsp"%>
 <sql:query var="rs" dataSource="${db}">select hp from rewinddetails where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <div class="container">
     <div class="jumbotron">
@@ -25,7 +27,9 @@
                 </c:forEach>
             </select>
         </div>
-        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Fetch" name="button">
+
+            <div class="form-group">
             <label for="swg">SWG value :</label>
             <input type="text" class="form-control" id="swg" name="swg" readonly>
         </div>

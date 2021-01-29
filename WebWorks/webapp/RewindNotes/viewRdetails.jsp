@@ -9,10 +9,12 @@
 <%@ include file="../AddOnServices/DBconnect.jsp"%>
 <html>
 
+
 <%@include file="../head.jsp"%>
 
 <body>
-<%@include file="../mainsidebar.jsp" %>
+<%@include file="../dashboardnavigation.jsp"%>
+<%@include file="../mainsidebar.jsp"%>
 <sql:query var="rs" dataSource="${db}">select hp from rewinddetails where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <div class="container">
     <div class="jumbotron">

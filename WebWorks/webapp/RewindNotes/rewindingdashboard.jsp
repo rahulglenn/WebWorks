@@ -9,7 +9,7 @@
 <html>
 <%@include file="../head.jsp"%>
 <body>
-    <%@include file="../mainsidebar.jsp" %>
-
+<%@include file="../dashboardnavigation.jsp"%>
+<%@include file="../mainsidebar.jsp"%>
 </body>
 </html>
