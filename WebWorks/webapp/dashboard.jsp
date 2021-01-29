@@ -7,11 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<%@include file="head.jsp"%>
-
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+</head>
 <body>
 <%@include file="mainsidebar.jsp"%>
 
