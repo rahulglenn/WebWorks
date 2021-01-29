@@ -23,7 +23,7 @@
             <label for="rid">Record ID :</label>
             <select class="form-control" id="rid" name="rid">
                 <c:forEach items="${rs.rows}" var="record">
-                    <option><c:out value="${record.rid}"></c:out></option>
+                    <option><c:out value="${record.rname}"></c:out></option>
                 </c:forEach>
             </select>
         </div>
@@ -34,6 +34,25 @@
         <button type="button" class="btn btn-primary" onclick="location.href='recordDashboard.jsp'">Back</button>
         </form>
     </div>
+    <script type="text/javascript">
+
+        function getRecordDetails(str)
+        {
+            var ob=new XMLHttpRequest();
+            ob.onreadystatechange=function ss()
+            {
+                if(ob.readyState==4)
+                {
+                    var details=ob.responseText;
+                    document.getElementById("recdetails").value=details[0];
+                }
+            }
+            var path="GetDetails?rid="+str;
+            ob.open("GET",path,false);
+            ob.send();
+            return true;
+        }
+    </script>
 </div>
 
 </body>

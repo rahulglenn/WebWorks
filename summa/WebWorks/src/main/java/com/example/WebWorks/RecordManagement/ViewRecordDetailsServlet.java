@@ -19,7 +19,7 @@ import java.sql.ResultSet;
 @WebServlet("/RecordManagement/ViewRecordDetailsServlet")
 public class ViewRecordDetailsServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         RecordDB obj=new RecordDB();
         obj.setCusid((int)req.getSession().getAttribute("cusid"));
         obj.setRecordName(Integer.parseInt(req.getParameter("rid")));

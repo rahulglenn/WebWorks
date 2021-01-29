@@ -26,8 +26,8 @@
         </div>
         <button type="button" class="btn btn-primary" onclick="location.href='RewindNotes/rewindingdashboard.jsp'">Rewinding
             Details</button>
-        <button type="button" class="btn btn-primary">Stock Management</button>
-        <button type="button" class="btn btn-primary">Employee Management</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='StockDetails/stockdashboard.jsp'">Stock Management</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='EmployeeManagement/employeedashboard.jsp'">Employee Management</button>
         <button type="button" class="btn btn-primary" onclick="location.href='RecordManagement/recordDashboard.jsp'">Record Management</button>
         <button type="button" class="btn btn-primary" onclick="location.href='index.jsp'">Logout</button>
     </div>

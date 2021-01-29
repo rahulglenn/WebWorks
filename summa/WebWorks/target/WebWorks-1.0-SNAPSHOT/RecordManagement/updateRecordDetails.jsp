@@ -16,13 +16,14 @@
 </head>
 
 <body>
+<c:set var="editable" value="readonly"></c:set>
 <sql:query var="rs" dataSource="${db}">select recname from recordmanagement where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <div class="container">
     <div class="jumbotron">
         <form method="post" action="UpdateRecordDetailsServlet">
         <div class="form-group">
             <label for="rid">Record ID :</label>
-            <select class="form-control" id="rid" name="rid">
+            <select class="form-control" id="rid" name="rid" onclick='getRecordDetails(this.value)'>
                 <c:forEach items="${rs.rows}" var="record">
                     <option><c:out value="${record.recname}"></c:out></option>
                 </c:forEach>
@@ -30,14 +31,34 @@
         </div>
         <div class="form-group">
             <label for="recdetails">Record Details :</label>
-            <textarea class="form-control" rows="5" id="recdetails" name="recdetails" readonly></textarea>
+            <span id="change">
+            <textarea class="form-control" rows="5" id="recdetails" name="recdetails"></textarea>
+            </span>
         </div>
-        <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-primary">Update</button>
-        <button type="button" class="btn btn-primary">Delete</button>
+            <input type="submit" class="btn btn-primary" value="Update" name="button">
+            <input type="submit" class="btn btn-primary" value="Delete" name="button">
         <button type="button" class="btn btn-primary" onclick="location.href='recordDashboard.jsp'">Back</button>
         </form>
     </div>
+    <script type="text/javascript">
+
+        function getRecordDetails(str)
+        {
+            var ob=new XMLHttpRequest();
+            ob.onreadystatechange=function ss()
+            {
+                if(ob.readyState==4)
+                {
+                    var details=ob.responseText;
+                    document.getElementById("recdetails").value=details;
+                }
+            }
+            var path="GetDetails?rid="+str;
+            ob.open("GET",path,false);
+            ob.send();
+            return true;
+        }
+    </script>
 </div>
 
 </body>

@@ -20,7 +20,7 @@
         <form method="post" action="AddRdetailsServlet">
         <div class="form-group">
             <label for="hp">Enter HP : </label>
-            <input type="text" class="form-control" id="hp" name="hp">
+            <input type="text" class="form-control" id="hp" name="hp" >
         </div>
         <div class="form-group">
             <label for="swg">Enter SWG value :</label>

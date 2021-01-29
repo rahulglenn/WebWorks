@@ -20,7 +20,7 @@
     <div class="jumbotron">
         <div class="form-group">
             <label for="hp">HP :</label>
-            <select class="form-control" id="hp" name="hp">
+            <select class="form-control" id="hp" name="hp" onclick="getRewindDetails(this.value)">
                 <c:forEach items="${rs.rows}" var="rewind">
                     <option><c:out value="${rewind.hp}"></c:out></option>
                 </c:forEach>
@@ -58,7 +58,26 @@
                 onclick="location.href='rewindingdashboard.jsp'">Back</button>
     </div>
 </div>
-
+<script type="text/javascript">
+    function getRewindDetails(str)
+    {
+        var ob=new XMLHttpRequest();
+        ob.onreadystatechange=function ss()
+        {
+            if(ob.readyState==4)
+            {
+                var details=ob.responseText.split("||");
+                document.getElementById("swg").value=details[0];
+                document.getElementById("amount").value=details[1];
+                document.getElementById("rdetails").value=details[2];
+            }
+        }
+        var path="GetDetails?hp="+str;
+        ob.open("GET",path,false);
+        ob.send();
+        return true;
+    }
+</script>
 </body>
 
 </html>

@@ -36,7 +36,6 @@ public class AddRecordDetailsServlet extends HttpServlet {
             st.setString(2,obj.getRecordDetails());
             st.setInt(3,obj.getCusid());
             st.executeUpdate();
-            System.out.println(obj.getRecordName()+" "+obj.getCusid()+" "+obj.getRecordDetails());
             con.close();
         }
         catch(Exception e){
