@@ -25,8 +25,7 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
                 HttpSession session=request.getSession();
                 session.setAttribute("cusid",rs.getInt("cusid"));
-                RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
-                rd.forward(request, response);
+                response.sendRedirect("dashboard.jsp");
             }
             conn.close();
         }
