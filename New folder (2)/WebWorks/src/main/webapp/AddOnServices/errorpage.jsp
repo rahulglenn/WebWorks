@@ -26,6 +26,7 @@
 
     body {
         display: flex;
+        background: #E6E6E6;
     }
 
     h1 {
@@ -208,7 +209,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;

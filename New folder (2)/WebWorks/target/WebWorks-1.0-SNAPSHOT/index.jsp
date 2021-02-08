@@ -165,7 +165,7 @@
     }
 
 </style>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: #E6E6E6;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <%--        <button type="button" class="btn btn-primary" onclick="location.href='login.jsp'">Login</button>--%>

@@ -7,12 +7,12 @@
 </head>
 
 <%@include file="maincss.jsp"%>
-<body style="background: white">
+<body style="background: #E6E6E6;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="Images/Wavy_Gen-01_Single-07.jpg" alt="" style="border: none;
+            <img src="Images/Wavy_Gen-01_Single-07.png" alt="" style="border: none;
     margin-left: 30px;
     border-radius: 0%;
     padding: 5px;
@@ -43,7 +43,7 @@
                 </div>
                 <br>
                 <input type="submit" value="Sign In" class="btn"><br>
-                <h5 style="margin-right: 70px">Don't have an account? <a href="registration.jsp" style="margin-top: -15px; margin-right: 10px;">Sign Up</a></h5>
+                <h5 style="margin-right: 70px">Don't have an account? <a href="registration.jsp" style="margin-top: -20px; margin-right: -20px;">Sign Up</a></h5>
             </form>
         </div>
     </div>

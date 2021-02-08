@@ -16,12 +16,12 @@
     <title></title>
 </head>
 
-<body style="background: white;">
+<body style="background: #E6E6E6;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="Images/20945597.jpg" alt="" style="border: none;
+            <img src="Images/20945597.png" alt="" style="border: none;
             margin-left: 250px;
             margin-top: 30px;
             border-radius: 0%;
@@ -31,7 +31,7 @@
         </div>
         <div class="login-content" style="margin-top: 50px">
             <form method="post" action="ActivationValidation">
-                <img src="Images/avatar.svg" alt="">
+                <img src="Images/avatar.png" alt="">
                 <h2 class="title">Welcome</h2><br>
                 <div class="input-div one">
                     <div class="i">

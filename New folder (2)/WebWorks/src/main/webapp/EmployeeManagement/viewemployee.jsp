@@ -16,9 +16,9 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
     .styled-table thead tr {
-        background-color: #009879;
+        background-color: #532E1C;
         color: #ffffff;
-        text-align: left;
+        text-align: center;
     }
     .styled-table th,
     .styled-table td {
@@ -45,19 +45,19 @@
 <table class="styled-table">
     <thead>
     <th>
-        Emp. Id
+        Employee ID
     </th>
     <th>
-        Emp. Name
+        Employee Name
     </th>
     <th>
         Address
     </th>
     <th>
-        D.O.B
+        Date Of Birth
     </th>
     <th>
-        Phone No
+        Phone Number
     </th>
     <th>
         Salary

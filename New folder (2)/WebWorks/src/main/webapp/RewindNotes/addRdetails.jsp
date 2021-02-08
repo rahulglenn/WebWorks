@@ -84,7 +84,7 @@
         grid-template-columns: 7% 93%;
         margin: 25px 0;
         padding: 5px 0;
-        border-bottom: 2px solid #d9d9d9;
+        border-bottom: 2px solid #C5A880;
     }
 
     .login-content .input-div.one {
@@ -92,7 +92,7 @@
     }
 
     .i {
-        color: #d9d9d9;
+        color: #C5A880;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -124,7 +124,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: #38d39f;
+        background-color: #b3913e;
         transition: 0.4s;
     }
 
@@ -147,7 +147,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #38d39f;
+        color: #b3913e;
     }
 
     .input-div > div > input {
@@ -190,7 +190,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -257,7 +257,7 @@
                         </div>
                         <div class="div">
                             <h5>Enter HP of the Motor</h5>
-                            <input type="text" class="input" id="hp" name="hp">
+                            <input type="text" class="input" id="hp" name="hp" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="input-div one">
@@ -266,7 +266,7 @@
                         </div>
                         <div class="div">
                             <h5>Enter SWG value</h5>
-                            <input type="text" class="input" id="swg" name="swg">
+                            <input type="text" class="input" id="swg" name="swg" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="input-div one">
@@ -275,7 +275,7 @@
                         </div>
                         <div class="div">
                             <h5>Enter Amount needed</h5>
-                            <input type="text" class="input" id="amount" name="amount">
+                            <input type="text" class="input" id="amount" name="amount" autocomplete="off"  required>
                         </div>
                     </div>
                     <div class="input-div one">
@@ -284,9 +284,10 @@
                         </div>
                         <div class="div">
                             <h5>Rewinding Details</h5>
-                            <input class="input" id="rdetails" name="rdetails" style="border: white;">
+                            <textarea class="inpu" id="rdetails" rows="10" name="rdetails" style="width: 110%;margin-top: 40px;margin-left: -25px" autocomplete="off" required></textarea>
                         </div>
                     </div>
+                    <br><br><br><br><br><br><br>
                     <input type="submit" class="btn btn-primary" value="Add">
                 </form>
             </div>

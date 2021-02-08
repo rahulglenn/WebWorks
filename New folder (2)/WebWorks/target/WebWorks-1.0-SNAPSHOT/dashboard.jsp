@@ -27,7 +27,7 @@
         top:0;
         width: 100%;
         height: 10%;
-        bottom: 0;
+        background: black;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -40,14 +40,14 @@
     }
     .navbar ul li a {
         text-decoration: none;
-        color: rgb(5, 0, 0);
+        color: white;
         text-transform: uppercase;
     }
     .navbar ul li::after {
         content: "";
         height: 3px;
         width: 0;
-        background: #0353bb;
+        background: white;
         position: absolute;
         left: 0;
         bottom: -10px;
@@ -57,14 +57,13 @@
         width: 100%;
     }
 </style>
-<body>
+<body style="background: white;">
 
 <div class="banner">
     <div class="navbar">
-        <a class="navbar-brand" href="#"><img src="Images/avatar.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="" width="30" height="30" class="d-inline-block align-top" alt=""></a>
         <ul>
-            <li><label>Welcome,<span id="rockers"></span></label></li>
-            <li><a href="#">About Us</a></li>
+            <li><label style="color: white;">Welcome,<span id="rockers"></span></label></li>
             <li><a href="#">Contact</a></li>
             <li><a href="index.jsp">Logout</a></li>
         </ul>

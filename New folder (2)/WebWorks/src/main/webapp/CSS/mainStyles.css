@@ -66,13 +66,13 @@ form {
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 2px solid #C5A880;
 }
 .login-content .input-div.one {
     margin-top: 0;
 }
 .i {
-    color: #d9d9d9;
+    color: #C5A880;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +157,7 @@ a:hover {
     border-radius: 25px;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right, #b3913e, #cfa33a, #b38822);
+    background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;

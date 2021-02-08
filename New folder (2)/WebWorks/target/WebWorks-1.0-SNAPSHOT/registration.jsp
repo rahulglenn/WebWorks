@@ -9,12 +9,12 @@
     <title></title>
 </head>
 <%@include file="maincss.jsp"%>
-<body style="background: white">
+<body style="background: #E6E6E6;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="Images/20943394.jpg" alt="" style="border: none;
+            <img src="Images/20943394.png" alt="" style="border: none;
             margin-left: 250px;
             margin-top: 30px;
             border-radius: 0%;
@@ -24,7 +24,7 @@
         </div>
         <div class="login-content">
             <form method="get" action="RegisterServlet">
-                <img src="Images/avatar.svg" alt="">
+                <img src="Images/avatar.png" alt="">
                 <h2 class="title">Register</h2><br>
                 <div class="input-div one">
                     <div class="i">
@@ -37,7 +37,7 @@
                         border-radius: 25px;
                         outline: none;
                         border: none;
-                        background-image: linear-gradient(to right, #b3913e, #cfa33a, #b38822);
+                        background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
                         background-size: 200%;
                         font-size: 1.2rem;
                         color: #fff;
@@ -50,7 +50,7 @@
                         <input type="text" class="input" id="key" name="key" value="${Key}" autocomplete="off" ><br>
                     </div>
                 </div>
-                <h5 style="margin-right: 70px;">Don't have an activation key?<a href="activation.jsp" style="margin-top: -15px; margin-right: -10px;">Buy now</a></h5><br>
+                <h5 style="margin-right: 70px;">Don't have an activation key?<a href="activation.jsp" style="margin-top: -20px; margin-right: -50px;">Buy now</a></h5><br>
             <form method="post" action="RegisterServlet">
                 <div class="input-div one">
                     <div class="i">

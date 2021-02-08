@@ -78,7 +78,7 @@
         grid-template-columns: 7% 93%;
         margin: 25px 0;
         padding: 5px 0;
-        border-bottom: 2px solid #d9d9d9;
+        border-bottom: 2px solid #C5A880;
     }
 
     .login-content .input-div.one {
@@ -86,7 +86,7 @@
     }
 
     .i {
-        color: #d9d9d9;
+        color: #C5A880;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,7 +118,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: #38d39f;
+        background-color: #b3913e;
         transition: 0.4s;
     }
 
@@ -141,7 +141,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #38d39f;
+        color: #b3913e;
     }
 
     .input-div > div > input {
@@ -184,7 +184,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -274,7 +274,7 @@
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Record Details</h5>
-                            <input class="input" rows="5" id="recdetails" name="recdetails" required>
+                            <textarea class="inpu" rows="10" id="recdetails" name="recdetails" autocomplete="off" required style="width: 110%;margin-left: -25px;margin-top: 10px;"></textarea>
                         </div>
                     </div>
                 </form>

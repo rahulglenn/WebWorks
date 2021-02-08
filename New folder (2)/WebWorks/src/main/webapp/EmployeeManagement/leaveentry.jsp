@@ -85,7 +85,7 @@
         grid-template-columns: 7% 93%;
         margin: 25px 0;
         padding: 5px 0;
-        border-bottom: 2px solid #d9d9d9;
+        border-bottom: 2px solid #C5A880;
     }
 
     .login-content .input-div.one {
@@ -93,7 +93,7 @@
     }
 
     .i {
-        color: #d9d9d9;
+        color: #C5A880;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -125,7 +125,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: #38d39f;
+        background-color: #b3913e;
         transition: 0.4s;
     }
 
@@ -148,7 +148,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #38d39f;
+        color: #b3913e;
     }
 
     .input-div > div > input {
@@ -191,7 +191,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        background-image: linear-gradient(to right, #532E1C, #493323, #5e422d);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -308,7 +308,7 @@
                         </div>
                         <div class="div">
                             <h5>No Of Days</h5>
-                            <input type="number" class="input" id="nodays" name="nodays" required>
+                            <input type="number" class="input" id="nodays" name="nodays" autocomplete="off" required>
                         </div>
                     </div>
                     <input type="submit" class="btn btn-primary" value="Update" name="button">

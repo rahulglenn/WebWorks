@@ -71,9 +71,9 @@ public class LoginServlet extends HttpServlet {
         catch(Exception ee)
         {
 
-            //RequestDispatcher rd= request.getRequestDispatcher("/AddOnServices/errorpage.jsp");
-            //rd.forward(request,response);
-            response.getWriter().println(ee);
+            RequestDispatcher rd= request.getRequestDispatcher("/AddOnServices/errorpage.jsp");
+            rd.forward(request,response);
+//            response.getWriter().println(ee);
         }
 
 }}
