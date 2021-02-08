@@ -54,7 +54,7 @@ public class RegisterValidation extends HttpServlet {
         }
         else if(CheckPassword==false){
             out.println("<script type=\"text/javascript\">");
-            out.println("alert('Password does not meet the requirements);");
+            out.println("alert('Password does not meet the requirements');");
             out.println("location='registration.jsp';");
             out.println("</script>");
         }

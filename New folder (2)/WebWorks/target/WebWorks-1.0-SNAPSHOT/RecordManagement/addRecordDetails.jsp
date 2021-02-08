@@ -3,6 +3,7 @@
 <html>
 <%@include file="recordDashboard.jsp"%>
 <style>
+
     * {
         padding: 0;
         margin: 0;
@@ -14,6 +15,7 @@
         overflow-x: hidden;
     }
     .banner {
+        background: white;
     }
     .wave {
         position: fixed;
@@ -32,11 +34,14 @@
         margin-top: 50px;
         width: 100vw;
         height: 75vh;
+        left: 0px;
         margin-left: 400px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 7rem;
         padding: 0 2rem;
+        background: white;
+
     }
 
 
@@ -45,6 +50,8 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        background: white;
+
     }
 
 
@@ -79,7 +86,7 @@
     }
 
     .i {
-        color: white;
+        color: #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,7 +106,7 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        color: black;
+        color: #999;
         font-size: 18px;
         transition: 0.3s;
     }
@@ -111,7 +118,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: white;
+        background-color: #38d39f;
         transition: 0.4s;
     }
 
@@ -134,7 +141,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #333333;
+        color: #38d39f;
     }
 
     .input-div > div > input {
@@ -148,7 +155,7 @@
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1.2rem;
-        color: white;
+        color: #555;
         font-family: "poppins", sans-serif;
     }
 
@@ -177,7 +184,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -229,7 +236,7 @@
         }
     }
 </style>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: white;">
 <div class="banner">
     <div class="container">
         <div class="jumbotron">
@@ -238,7 +245,7 @@
                 <form method="post" action="AddRecordDetailsServlet">
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fab fa-superpowers"></i>
+                            <i class="fa fa-hashtag"></i>
                         </div>
                         <div class="div">
                             <h5>Enter Record ID</h5>
@@ -247,7 +254,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-info"></i>
                         </div>
                         <div class="div">
                             <h5>Record Details</h5>

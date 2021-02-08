@@ -19,8 +19,6 @@ public class GetDetails extends HttpServlet {
         PrintWriter out = response.getWriter();
         String details = "";
         boolean check = false;
-
-        if (!request.getParameter("empid").equals("0")) {
             int empid = Integer.parseInt(request.getParameter("empid"));
             try {
                 Connection conn = DBconnect.getConn();
@@ -38,7 +36,7 @@ public class GetDetails extends HttpServlet {
                 RequestDispatcher rd= request.getRequestDispatcher("../AddOnServices/errorpage.jsp");
                 rd.forward(request,response);
             }
-        }
+
         if(!check)
         {
             details="----"+"||"+"----"+"||"+"----"+"||----||----||----";

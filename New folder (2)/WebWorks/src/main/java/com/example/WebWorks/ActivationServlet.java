@@ -52,7 +52,7 @@ public class ActivationServlet extends HttpServlet {
             st.setString(6,prod.getEmail());
             st.executeUpdate();
             conn.close();
-            //MailUtil.sendMail(prod.getEmail(), prod.getKey());
+//            MailUtil.sendMail(prod.getEmail(), prod.getKey());
         }
         catch(Exception ee)
         {

@@ -10,6 +10,7 @@
 <html>
 <%@include file="employeedashboard.jsp"%>
 <style>
+
     * {
         padding: 0;
         margin: 0;
@@ -21,6 +22,7 @@
         overflow-x: hidden;
     }
     .banner {
+        background: white;
     }
     .wave {
         position: fixed;
@@ -39,11 +41,14 @@
         margin-top: 50px;
         width: 100vw;
         height: 75vh;
+        left: 0px;
         margin-left: 400px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 7rem;
         padding: 0 2rem;
+        background: white;
+
     }
 
 
@@ -52,6 +57,8 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        background: white;
+
     }
 
 
@@ -86,7 +93,7 @@
     }
 
     .i {
-        color: white;
+        color: #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -106,7 +113,7 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        color: black;
+        color: #999;
         font-size: 18px;
         transition: 0.3s;
     }
@@ -118,7 +125,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: white;
+        background-color: #38d39f;
         transition: 0.4s;
     }
 
@@ -141,7 +148,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #333333;
+        color: #38d39f;
     }
 
     .input-div > div > input {
@@ -155,7 +162,7 @@
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1.2rem;
-        color: white;
+        color: #555;
         font-family: "poppins", sans-serif;
     }
 
@@ -184,7 +191,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -236,7 +243,7 @@
         }
     }
 </style>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: white;">
 <sql:query var="rs" dataSource="${db}">select empid from employeedetails where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <div class="banner">
     <div class="container">
@@ -246,7 +253,7 @@
                 <form method="post" action="EditEmployeeServlet">
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fab fa-superpowers"></i>
+                            <i class="fa fa-hashtag"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Employee ID</h5>
@@ -270,7 +277,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fab fa-superpowers"></i>
+                            <i class="fa fa-user"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Employee Name</h5>
@@ -279,7 +286,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-home"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">City</h5>
@@ -288,7 +295,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fa fa-balance-scale"></i>
+                            <i class="fa fa-birthday-cake"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Date Of Birth</h5>
@@ -297,7 +304,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-mobile"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Phone Number</h5>
@@ -306,14 +313,14 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-money"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Salary</h5>
                             <input type="text" class="input" id="salary" name="salary" required>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Update" name="button">
+                    <input type="submit" class="btn btn-primary" value="Update" name="button"><br>
                     <input type="submit" class="btn btn-primary" value="Delete" name="button">
                 </form>
             </div>

@@ -22,6 +22,7 @@
         overflow-x: hidden;
     }
     .banner {
+        background: white;
     }
     .wave {
         position: fixed;
@@ -46,6 +47,8 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 7rem;
         padding: 0 2rem;
+        background: white;
+
     }
 
 
@@ -54,6 +57,8 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        background: white;
+
     }
 
 
@@ -88,7 +93,7 @@
     }
 
     .i {
-        color: white;
+        color: #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -108,7 +113,7 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        color: black;
+        color: #999;
         font-size: 18px;
         transition: 0.3s;
     }
@@ -120,7 +125,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: white;
+        background-color: #38d39f;
         transition: 0.4s;
     }
 
@@ -143,7 +148,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #333333;
+        color: #38d39f;
     }
 
     .input-div > div > input {
@@ -157,7 +162,7 @@
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1.2rem;
-        color: white;
+        color: #555;
         font-family: "poppins", sans-serif;
     }
 
@@ -186,7 +191,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -238,7 +243,7 @@
         }
     }
 </style>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body>
 <c:set var="editable" value="readonly"></c:set>
 <sql:query var="rs" dataSource="${db}">select hp from rewinddetails where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <div class="banner">
@@ -246,7 +251,7 @@
         <div class="jumbotron">
             <h2>Update Your Rewinding Details Here...</h2><br><br>
             <div class="login-content">
-                <form method="post" action="AddRdetailsServlet">
+                <form method="post" action="UpdateRdetailsServlet">
                     <div class="input-div one">
                         <div class="i">
                             <i class="fab fa-superpowers"></i>
@@ -265,15 +270,15 @@
         outline: 0px;
         background: none;
         font-family: "poppins", sans-serif;">
-                                <c:forEach items="${rs.rows}" var="rewind">
-                                    <option><c:out value="${rewind.hp}"></c:out></option>
-                                </c:forEach>
+                            <c:forEach items="${rs.rows}" var="rewind">
+                                <option><c:out value="${rewind.hp}"></c:out></option>
+                            </c:forEach>
                             </select>
                         </div>
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-exclamation"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">SWG value</h5>
@@ -291,7 +296,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class=""></i>
+                            <i class="fa fa-info"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Rewinding Details</h5>

@@ -29,6 +29,15 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
                 HttpSession session=request.getSession();
                 int cusid=rs.getInt("cusid");
+                int platcode=rs.getInt("PlatformCode");
+                String platstr=String.valueOf(platcode);
+                int p1=Integer.valueOf(platstr.charAt(0)+"");
+                int p2=Integer.valueOf(platstr.charAt(1)+"");
+                int p3=Integer.valueOf(platstr.charAt(2)+"");
+                session.setAttribute("plat",platcode);
+                session.setAttribute("p1",p1);
+                session.setAttribute("p2",p2);
+                session.setAttribute("p3",p3);
                 String cname=rs.getString("Name");
                 session.setAttribute("cusid",cusid);
                 session.setAttribute("name",cname);
@@ -45,6 +54,8 @@ public class LoginServlet extends HttpServlet {
                 st.setString(4,"Logged In!");
                 st.executeUpdate();
                 response.sendRedirect("dashboard.jsp");
+                //RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
+                //rd.forward(request, response);
             }
             else
             {
@@ -52,15 +63,17 @@ public class LoginServlet extends HttpServlet {
                 out.println("alert('Username not found Please Register');");
                 out.println("location='login.jsp';");
                 out.println("</script>");
+//                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+//                rd.forward(request, response);
             }
             conn.close();
         }
         catch(Exception ee)
         {
 
-            RequestDispatcher rd= request.getRequestDispatcher("/AddOnServices/errorpage.jsp");
-            rd.forward(request,response);
-            //response.getWriter().println(ee);
+            //RequestDispatcher rd= request.getRequestDispatcher("/AddOnServices/errorpage.jsp");
+            //rd.forward(request,response);
+            response.getWriter().println(ee);
         }
 
 }}

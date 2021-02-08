@@ -16,12 +16,12 @@
     <title></title>
 </head>
 
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: white;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="ActivationAvatar.JPG" alt="" style="border: none;
+            <img src="Images/20945597.jpg" alt="" style="border: none;
             margin-left: 250px;
             margin-top: 30px;
             border-radius: 0%;
@@ -31,7 +31,7 @@
         </div>
         <div class="login-content" style="margin-top: 50px">
             <form method="post" action="ActivationValidation">
-                <img src="LoginAvatar.JPG" alt="">
+                <img src="Images/avatar.svg" alt="">
                 <h2 class="title">Welcome</h2><br>
                 <div class="input-div one">
                     <div class="i">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="div">
                         <h5>Enter your Email ID</h5>
-                        <input type="email" class="input" id="email" name="email" autocomplete="off">
+                        <input type="email" class="input" id="email" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     </div>
                 </div>
                 <div class="input-div one">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="div">
                         <h5>Company Name</h5>
-                        <input type="text" class="input" id="cname" name="cname" autocomplete="off">
+                        <input type="text" class="input" id="cname" name="cname" autocomplete="off" pattern="[A-Za-z]">
                     </div>
                 </div>
                 <div class="input-div one">

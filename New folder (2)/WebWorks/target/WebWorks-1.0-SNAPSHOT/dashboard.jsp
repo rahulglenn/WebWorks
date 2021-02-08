@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@include file="AddOnServices/DBconnect.jsp"%>
 <html>
 <head>
     <title></title>
@@ -61,17 +61,21 @@
 
 <div class="banner">
     <div class="navbar">
-        <a class="navbar-brand" href="#"><img src="avatar.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="Images/avatar.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
         <ul>
             <li><label>Welcome,<span id="rockers"></span></label></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="index.jsp">Logout</a></li>
         </ul>
+        <c:set var="p1" scope="session" value='<%= (int)session.getAttribute("p1") %>'/>
+        <c:set var="p2" scope="session" value='<%= (int)session.getAttribute("p2") %>'/>
+        <c:set var="p3" scope="session" value='<%= (int)session.getAttribute("p3") %>'/>
+        <c:set var="plat" scope="session" value='<%= (int)session.getAttribute("plat") %>'/>
     </div>
 </div>
 <script>
-    <%@include file="AddOnServices/DBconnect.jsp"%>
+
     <sql:query var="rs" dataSource="${db}">select * from customerlogin where cusid=<%= session.getAttribute("cusid") %></sql:query>
     <c:forEach var="row" items="${rs.rows}">
     var x = '${row.Name}';

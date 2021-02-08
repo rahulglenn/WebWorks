@@ -100,8 +100,8 @@ public class SWGmap {
         int i,j;
         for(i=0;i<test.size();i++)
         {
-            System.out.print(test.get(i)+" ");
-            //System.out.println();
+                System.out.print(test.get(i)+" ");
+                //System.out.println();
         }
     }
 }

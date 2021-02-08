@@ -10,7 +10,10 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
+/**
+ *
+ * @author rahul
+ */
 public class MailUtil {
     public static void sendMail(String rec, String Key) throws Exception {
         Properties prop=new Properties();

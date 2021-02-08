@@ -11,10 +11,22 @@
         sidebar.innerHTML=`
                     <h2>Welcome</h2>
                     <h5 class="sidebar-heading">Platform</h5>
+                    <c:if test="${plat==222}">
                     <a href="RewindNotes/rewindingdashboard.jsp" target="_self">Rewinding Details</a>
                     <a href="StockDetails/stockdashboard.jsp" target="_self">Stock Management</a>
                     <a href="EmployeeManagement/employeedashboard.jsp" target="_self">Employee Management</a>
                     <a href="RecordManagement/recordDashboard.jsp" target="_self">Record Management</a><hr>
+                    </c:if>
+                    <c:if test="${p3==1}">
+                    <a href="StockDetails/stockdashboard.jsp" target="_self">Stock Management</a>
+                    </c:if>
+                    <c:if test="${p2==1}">
+                    <a href="EmployeeManagement/employeedashboard.jsp" target="_self">Employee Management</a>
+                    </c:if>
+                    <c:if test="${p1==1}">
+                    <a href="RecordManagement/recordDashboard.jsp" target="_self">Record Management</a><hr>
+                    </c:if>
+
                     <label class="sidebar-footer">Last Login : `+y+`</label>`;
     }
     else if(url.match(/WebWorks_war_exploded\/RewindNotes/)){

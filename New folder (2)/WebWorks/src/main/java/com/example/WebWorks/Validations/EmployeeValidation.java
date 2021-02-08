@@ -57,15 +57,15 @@ public class EmployeeValidation extends HttpServlet {
             out.println("location='addemployee.jsp';");
             out.println("</script>");
         }
-        else if(Salary.equals("0")){
-            out.println("<script type=\"text/javascript\">");
-            out.println("alert('Salary can't be zero');");
-            out.println("location='addemployee.jsp';");
-            out.println("</script>");
-        }
         else if(Salary.charAt(0)=='0'){
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Salary can't be empty');");
+            out.println("location='addemployee.jsp';");
+            out.println("</script>");
+        }
+        else if(Salary.equals("0")){
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Salary can't be zero');");
             out.println("location='addemployee.jsp';");
             out.println("</script>");
         }

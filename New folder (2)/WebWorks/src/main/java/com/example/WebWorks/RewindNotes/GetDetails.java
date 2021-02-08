@@ -28,9 +28,28 @@ public class GetDetails extends HttpServlet {
                 pst.setFloat(1, hp);
                 pst.setInt(2,(int)request.getSession().getAttribute("cusid"));
                 ResultSet rst = pst.executeQuery();
+                float swg=0;
+                float weight=0;
                 if (rst.next()) {
-                    details = rst.getFloat("swg") + "||" + rst.getFloat("Weight")+"||"+rst.getString("Details");
+                    swg=rst.getFloat("swg");
+                    weight=rst.getFloat("Weight");
+                    details = swg + "||" + weight +"||"+rst.getString("Details");
                     check = true;
+                }
+                HttpSession sess= request.getSession();
+                sess.setAttribute("rswg",swg);
+                sess.setAttribute("rweight",weight);
+                pst=conn.prepareStatement("select weight from stockdetails where cusid=? and SWG=?");
+                pst.setInt(1,(int)request.getSession().getAttribute("cusid"));
+                pst.setFloat(2,swg);
+                ResultSet rs2= pst.executeQuery();
+                if(rs2.next())
+                {
+                    details+="||"+rs2.getFloat("weight");
+                }
+                else
+                {
+                    details+="||"+"Nil";
                 }
                 conn.close();
             } catch (Exception ee) {
@@ -41,7 +60,7 @@ public class GetDetails extends HttpServlet {
         }
         if(!check)
         {
-            details="----"+"||"+"----"+"||"+"----";
+            details="----"+"||"+"----"+"||"+"----"+"||----";
         }
         out.println(details);
         out.close();

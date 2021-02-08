@@ -40,7 +40,7 @@
         color: #009879;
     }
 </style>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: white;">
 <sql:query var="rs" dataSource="${db}">select * from employeedetails where cusid=<%= session.getAttribute("cusid") %></sql:query>
 <table class="styled-table">
     <thead>

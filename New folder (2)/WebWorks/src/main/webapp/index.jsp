@@ -15,7 +15,7 @@
     .banner {
         width: 100%;
         height: 100vh;
-        background-image: url("Home.jpg");
+        background-image: url("Images/Home.jpg");
         background-size: cover;
         background-position: center;
     }

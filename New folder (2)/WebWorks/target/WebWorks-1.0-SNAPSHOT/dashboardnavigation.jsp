@@ -24,10 +24,13 @@
         overflow: hidden;
         position: sticky;
         top:0;
+        margin-top: -10px;
+        margin-right: 20px;
+        margin-left: -10px;
         width: 100%;
-        margin: auto;
         padding: 35px 0;
         display: flex;
+        background: black;
         align-items: center;
         justify-content: space-between;
     }
@@ -51,7 +54,7 @@
         content: "";
         height: 3px;
         width: 0;
-        background: #0353bb;
+        background: white;
         position: absolute;
         left: 0;
         bottom: -10px;
@@ -64,7 +67,7 @@
 
 <div class="banner">
     <div class="navbar">
-        <a class="navbar-brand" href="#"><img src="" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="" alt=""></a>
         <ul>
             <li><label style="color: white;">Welcome,<span id="rockers"></span></label></li>
             <li><a href="#">About Us</a></li>

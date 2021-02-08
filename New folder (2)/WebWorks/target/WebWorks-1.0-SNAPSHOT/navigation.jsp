@@ -12,7 +12,7 @@
 
 
 <body style="background: linear-gradient(to left, #ad5389, #3c1053);">
-<div class="navbar">
+<div class="navbar" id="navbar">
     <img src="" class="logo" alt="">
     <ul>
         <li><a href="index.jsp" style="color: white">Home</a></li>
@@ -23,5 +23,16 @@
     </ul>
 </div>
 </body>
-
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
 </html>

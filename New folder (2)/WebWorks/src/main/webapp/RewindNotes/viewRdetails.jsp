@@ -23,6 +23,7 @@
         overflow-x: hidden;
     }
     .banner {
+        background: white;
     }
     .wave {
         position: fixed;
@@ -47,6 +48,8 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 7rem;
         padding: 0 2rem;
+        background: white;
+
     }
 
 
@@ -55,6 +58,8 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        background: white;
+
     }
 
 
@@ -89,7 +94,7 @@
     }
 
     .i {
-        color: white;
+        color: #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -109,7 +114,7 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        color: black;
+        color: #999;
         font-size: 18px;
         transition: 0.3s;
     }
@@ -121,7 +126,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: white;
+        background-color: #38d39f;
         transition: 0.4s;
     }
 
@@ -144,7 +149,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #333333;
+        color: #38d39f;
     }
 
     .input-div > div > input {
@@ -158,7 +163,7 @@
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1.2rem;
-        color: white;
+        color: #555;
         font-family: "poppins", sans-serif;
     }
 
@@ -187,7 +192,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -246,7 +251,7 @@
         <div class="jumbotron">
             <h2>View Your Rewinding Details Here...</h2><br><br>
             <div class="login-content">
-                <form>
+                <form method="post" action="ViewRdetailsServlet">
                     <div class="input-div one">
                         <div class="i">
                             <i class="fab fa-superpowers"></i>
@@ -265,15 +270,15 @@
         outline: 0px;
         background: none;
         font-family: "poppins", sans-serif;">
-                                <c:forEach items="${rs.rows}" var="rewind">
-                                    <option><c:out value="${rewind.hp}"></c:out></option>
-                                </c:forEach>
+                            <c:forEach items="${rs.rows}" var="rewind">
+                                <option><c:out value="${rewind.hp}"></c:out></option>
+                            </c:forEach>
                             </select>
                         </div>
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fa fa-info"></i>
+                            <i class="fa fa-exclamation"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">SWG value</h5>
@@ -291,7 +296,7 @@
                     </div>
                     <div class="input-div one">
                         <div class="i">
-                            <i class="fa fa-exclamation"></i>
+                            <i class="fa fa-info"></i>
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Rewinding Details</h5>
@@ -305,72 +310,36 @@
                         </div>
                         <div class="div">
                             <h5 style="top: -5px; font-size: 15px;">Weight</h5>
-                            <input type="text" class="input" id="weight" value="44.5" readonly>
+                            <input type="text" class="input" id="weight" readonly>
                         </div>
                     </div>
                     <h3>Alternate Options</h3><br>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <div class="input-div one">
-                                <div class="i">
-                                    <i class="fa fa-info"></i>
+                    <input type="submit" class="btn btn-primary" value="Fetch" name="button">
+                    <c:forEach items="${al}" var="alter">
+
+                        <div class="form-row" style="margin-top: 20px;">
+                            <div class="form-group col-md-6">
+                                <div class="input-div one">
+                                    <div class="i">
+                                        <i class="fa fa-exclamation"></i>
+                                    </div>
+                                    <div class="div">
+                                        <h5 style="top: -5px; font-size: 15px;">SWG value</h5>
+                                        <input type="text" class="input" id="swg" value=<c:out value="${alter.swg}"/> readonly>
+                                    </div>
                                 </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">SWG</h5>
-                                    <input type="text" class="input" id="SWG" value="20.0" readonly>
-                                </div>
-                            </div>
-                            <div class="input-div one" style="margin-top: -82px;margin-left: 500px">
-                                <div class="i">
-                                    <i class="fa fa-balance-scale"></i>
-                                </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">Weight</h5>
-                                    <input type="text" class="input" id="weight" value="10.54803" readonly>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <div class="input-div one">
-                                <div class="i">
-                                    <i class="fa fa-info"></i>
-                                </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">SWG</h5>
-                                    <input type="text" class="input" id="SWG" value="20.5" readonly>
-                                </div>
-                            </div>
-                            <div class="input-div one" style="margin-top: -82px;margin-left: 500px">
-                                <div class="i">
-                                    <i class="fa fa-balance-scale"></i>
-                                </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">Weight</h5>
-                                    <input type="text" class="input" id="weight" value="9.402836" readonly>
+                                <div class="input-div one" style="margin-top: -82px; margin-left: 200px;">
+                                    <div class="i">
+                                        <i class="fa fa-balance-scale"></i>
+                                    </div>
+                                    <div class="div">
+                                        <h5 style="top: -5px; font-size: 15px;">Weight</h5>
+                                        <input type="text" class="input" id="weight" value="<c:out value="${alter.weight}"/>" readonly>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <div class="input-div one">
-                                <div class="i">
-                                    <i class="fa fa-info"></i>
-                                </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">SWG</h5>
-                                    <input type="text" class="input" id="SWG" value="28.0" readonly>
-                                </div>
-                            </div>
-                            <div class="input-div one" style="margin-top: -82px;margin-left: 500px">
-                                <div class="i">
-                                    <i class="fa fa-balance-scale"></i>
-                                </div>
-                                <div class="div">
-                                    <h5 style="top: -5px; font-size: 15px;">Weight</h5>
-                                    <input type="text" class="input" id="weight" value="1.7837403" readonly>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </form>
             </div>
         </div>
@@ -409,6 +378,7 @@
                 document.getElementById("swg").value=details[0];
                 document.getElementById("amount").value=details[1];
                 document.getElementById("rdetails").value=details[2];
+                document.getElementById("weight").value=details[3];
             }
         }
         var path="GetDetails?hp="+str;
@@ -417,7 +387,6 @@
         return true;
     }
 </script>
-
 </body>
 
 </html>

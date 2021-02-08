@@ -7,12 +7,12 @@
 </head>
 
 <%@include file="maincss.jsp"%>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
-<div class="banner" id="grad">
+<body style="background: white">
+<div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="LoginImg.JPG" alt="" style="border: none;
+            <img src="Images/Wavy_Gen-01_Single-07.jpg" alt="" style="border: none;
     margin-left: 30px;
     border-radius: 0%;
     padding: 5px;
@@ -21,8 +21,8 @@
         </div>
         <div class="login-content" style="margin-top: 100px;">
             <form action="LoginServlet" method="post">
-                <img src="LoginAvatar.JPG" alt="">
-                <h2 class="title" style="font-family: 'Comic Sans MS'">Login In</h2>
+                <img src="Images/avatar.png" alt="">
+                <h2 class="title">Sign In</h2>
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-envelope"></i>
@@ -43,7 +43,7 @@
                 </div>
                 <br>
                 <input type="submit" value="Sign In" class="btn"><br>
-                <h6 style="margin-right: 70px">Don't have an account? <a href="registration.jsp" style="margin-top: -15px; margin-right: 30px;">Sign Up</a></h6>
+                <h5 style="margin-right: 70px">Don't have an account? <a href="registration.jsp" style="margin-top: -15px; margin-right: 10px;">Sign Up</a></h5>
             </form>
         </div>
     </div>

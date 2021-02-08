@@ -28,31 +28,32 @@
     }
 
     .contact-box {
-        background: linear-gradient(to left, #ad5389, #3c1053);
+        background: white;
         display: flex;
     }
 
     .contact-left {
         flex-basis: 60%;
+        width: 100%;
         padding: 40px 60px;
     }
 
     .contact-right {
         flex-basis: 40%;
         padding: 40px;
-        background: linear-gradient(to left, #ad5389, #3c1053);
+        background: white;
         color: #fff;
     }
 
 
     .container p {
-        margin-bottom: 40px;
     }
 
     .input-row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        width: -100%;
     }
 
     .input-row .input-group {
@@ -113,38 +114,64 @@
     }
 </style>
 <%@include file="maincss.jsp"%>
-<body>
+<body style="background: white;">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <h1>Connect with us</h1><br>
         <p>We would love to respond to your queries and help you succeed. <br> Feel free to get in touch with us</p><br>
+        <div class="login-content" style="margin-top: 50px">
         <div class="contact-box">
             <div class="contact-left">
                 <h3>Sent your request</h3>
                 <form action="">
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label>Name</label>
-                            <input type="text" name="" id="" placeholder="Name here">
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Owner name</h5>
+                                <input type="text" class="input" id="name" name="name" autocomplete="off" pattern="[A-Za-z]" style="width: 100px;">
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <label>Phone</label>
-                            <input type="text" name="" id="" placeholder="Phone Number here">
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-mobile"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Phone No</h5>
+                                <input type="tel" class="input" id="number" name="phone" autocomplete="off" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                            </div>
                         </div>
                     </div>
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label>Email</label>
-                            <input type="email" name="" id="" placeholder="Email@here">
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Enter your Email ID</h5>
+                                <input type="email" class="input" id="email" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <label>Subject</label>
-                            <input type="text" name="" id="" placeholder="Any subject">
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Subject</h5>
+                                <input type="text" class="input" id="cname" name="cname" autocomplete="off" pattern="[A-Za-z]">
+                            </div>
                         </div>
                     </div>
-                    <label>Message</label>
-                    <textarea name="" id="" rows="5" placeholder="Your message"></textarea>
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Message</h5>
+                            <input type="text" class="input" id="cname" name="cname" autocomplete="off" pattern="[A-Za-z]">
+                        </div>
+                    </div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -166,7 +193,28 @@
                 </table>
             </div>
         </div>
+        </div>
     </div>
 </div>
+<script>
+    const inputs = document.querySelectorAll(".input");
+
+    function addcl() {
+        let parent = this.parentNode.parentNode;
+        parent.classList.add("focus");
+    }
+
+    function remcl() {
+        let parent = this.parentNode.parentNode;
+        if (this.value === "") {
+            parent.classList.remove("focus");
+        }
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener("focus", addcl);
+        input.addEventListener("blur", remcl);
+    });
+</script>
 </body>
 </html>

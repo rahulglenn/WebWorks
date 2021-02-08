@@ -9,12 +9,12 @@
     <title></title>
 </head>
 <%@include file="maincss.jsp"%>
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: white">
 <div class="banner">
     <%@include file="navigation.jsp"%>
     <div class="container">
         <div class="img">
-            <img src="RegistrationAvatar.JPG" alt="" style="border: none;
+            <img src="Images/20943394.jpg" alt="" style="border: none;
             margin-left: 250px;
             margin-top: 30px;
             border-radius: 0%;
@@ -24,8 +24,8 @@
         </div>
         <div class="login-content">
             <form method="get" action="RegisterServlet">
-                <img src="Capture.JPG" alt="">
-                <h2 class="title" style="font-family: 'Comic Sans MS'">Register</h2><br>
+                <img src="Images/avatar.svg" alt="">
+                <h2 class="title">Register</h2><br>
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-key"></i>
@@ -37,7 +37,7 @@
                         border-radius: 25px;
                         outline: none;
                         border: none;
-                        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+                        background-image: linear-gradient(to right, #b3913e, #cfa33a, #b38822);
                         background-size: 200%;
                         font-size: 1.2rem;
                         color: #fff;
@@ -50,8 +50,7 @@
                         <input type="text" class="input" id="key" name="key" value="${Key}" autocomplete="off" ><br>
                     </div>
                 </div>
-                <h6 style="margin-right: 70px;">Don't have an activation key?<a href="activation.jsp" style="margin-top: -15px; margin-right: 10px;">Buy now</a></h6><br>
-            </form>
+                <h5 style="margin-right: 70px;">Don't have an activation key?<a href="activation.jsp" style="margin-top: -15px; margin-right: -10px;">Buy now</a></h5><br>
             <form method="post" action="RegisterServlet">
                 <div class="input-div one">
                     <div class="i">
@@ -77,7 +76,7 @@
                     </div>
                     <div class="div">
                         <h5>Owner name</h5>
-                        <input type="text" class="input" id="name" name="name" autocomplete="off">
+                        <input type="text" class="input" id="name" name="name" autocomplete="off" pattern="[A-Za-z]">
                     </div>
                 </div>
                 <div class="input-div one">
@@ -85,8 +84,8 @@
                         <i class="fas fa-mobile"></i>
                     </div>
                     <div class="div">
-                        <h5>Phone No</h5>
-                        <input type="tel" class="input" id="number" name="phone" autocomplete="off">
+                        <h5>Phone Number</h5>
+                        <input type="tel" class="input" id="number" name="phone" autocomplete="off" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                     </div>
                 </div>
                 <div class=" input-div one">
@@ -104,7 +103,7 @@
                     </div>
                     <div class="div">
                         <h5>Password</h5>
-                        <input type="password" class="input" id="password" name="pass" autocomplete="off">
+                        <input type="password" class="input" id="password" name="pass" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -113,10 +112,11 @@
                     </div>
                     <div class="div">
                         <h5>Re-type Password</h5>
-                        <input type="password" class="input" id="repassword" name="repass" autocomplete="off">
+                        <input type="password" class="input" id="repassword" name="repass" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     </div>
                 </div><br>
                 <input type="submit" class="btn btn-primary" value="Register"><br><br>
+            </form>
             </form>
         </div>
     </div>
@@ -140,6 +140,7 @@
         input.addEventListener("focus", addcl);
         input.addEventListener("blur", remcl);
     });
+
 </script>
 </body>
 

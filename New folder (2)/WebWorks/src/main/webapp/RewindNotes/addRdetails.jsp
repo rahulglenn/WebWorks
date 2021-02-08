@@ -9,6 +9,7 @@
 
 <html>
 <style>
+
     * {
         padding: 0;
         margin: 0;
@@ -20,6 +21,7 @@
         overflow-x: hidden;
     }
     .banner {
+        background: white;
     }
     .wave {
         position: fixed;
@@ -38,11 +40,14 @@
         margin-top: 50px;
         width: 100vw;
         height: 75vh;
+        left: 0px;
         margin-left: 400px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 7rem;
         padding: 0 2rem;
+        background: white;
+
     }
 
 
@@ -51,6 +56,8 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        background: white;
+
     }
 
 
@@ -85,7 +92,7 @@
     }
 
     .i {
-        color: white;
+        color: #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -105,7 +112,7 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        color: black;
+        color: #999;
         font-size: 18px;
         transition: 0.3s;
     }
@@ -117,7 +124,7 @@
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: white;
+        background-color: #38d39f;
         transition: 0.4s;
     }
 
@@ -140,7 +147,7 @@
     }
 
     .input-div.focus > .i > i {
-        color: #333333;
+        color: #38d39f;
     }
 
     .input-div > div > input {
@@ -154,7 +161,7 @@
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1.2rem;
-        color: white;
+        color: #555;
         font-family: "poppins", sans-serif;
     }
 
@@ -183,7 +190,7 @@
         border-radius: 25px;
         outline: none;
         border: none;
-        background-image: linear-gradient(to right, #ad5389, #3c1053, #32be8f);
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
         background-size: 200%;
         font-size: 1.2rem;
         color: #fff;
@@ -237,54 +244,54 @@
 </style>
 <%@include file="rewindingdashboard.jsp"%>
 
-<body style="background: linear-gradient(to left, #ad5389, #3c1053);">
+<body style="background: whitesmoke;">
 <div class="banner">
-<div class="container">
-    <div class="jumbotron">
-        <h2>Add Your Rewinding Details Here...</h2><br><br>
-        <div class="login-content">
-            <form method="post" action="AddRdetailsServlet">
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fab fa-superpowers"></i>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Add Your Rewinding Details Here...</h2><br><br>
+            <div class="login-content">
+                <form method="post" action="AddRdetailsServlet">
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fab fa-superpowers"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Enter HP of the Motor</h5>
+                            <input type="text" class="input" id="hp" name="hp">
+                        </div>
                     </div>
-                    <div class="div">
-                        <h5>Enter HP of the Motor</h5>
-                        <input type="text" class="input" id="hp" name="hp">
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fa fa-exclamation"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Enter SWG value</h5>
+                            <input type="text" class="input" id="swg" name="swg">
+                        </div>
                     </div>
-                </div>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class=""></i>
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fa fa-balance-scale"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Enter Amount needed</h5>
+                            <input type="text" class="input" id="amount" name="amount">
+                        </div>
                     </div>
-                    <div class="div">
-                        <h5>Enter SWG value</h5>
-                        <input type="text" class="input" id="swg" name="swg">
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fa fa-info"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Rewinding Details</h5>
+                            <input class="input" id="rdetails" name="rdetails" style="border: white;">
+                        </div>
                     </div>
-                </div>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fa fa-balance-scale"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Enter Amount needed</h5>
-                        <input type="text" class="input" id="amount" name="amount">
-                    </div>
-                </div>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class=""></i>
-                    </div>
-                    <div class="div">
-                        <h5>Rewinding Details</h5>
-                        <input class="input" id="rdetails" name="rdetails" style="border: white;">
-                    </div>
-                </div>
-                <input type="submit" class="btn btn-primary" value="Add">
-            </form>
+                    <input type="submit" class="btn btn-primary" value="Add">
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <script>
